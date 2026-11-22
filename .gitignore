@@ -1,0 +1,9 @@
+.venv/
+target/
+build/
+data/
+results/raw/
+__pycache__/
+*.pyc
+.DS_Store
+.idea/

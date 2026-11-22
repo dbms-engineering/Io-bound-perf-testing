@@ -1,0 +1,4 @@
+# Default toolchain for this project; experiments pick a toolchain explicitly
+# (cargo +stable / cargo +nightly), which takes precedence over this file.
+[toolchain]
+channel = "stable"

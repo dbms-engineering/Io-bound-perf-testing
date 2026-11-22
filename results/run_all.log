@@ -1,0 +1,122 @@
+== unit tests
+
+running 5 tests
+.....
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.010s
+
+OK
+== paper table check
+== experiment aa_test
+[build] Variant(name='stable-O3', toolchain='stable', opt_level=3, rustflags='')
+[server] /Users/mykeawoniran/Desktop/io-bound-perf-testing/target/release/static_server --root /Users/mykeawoniran/Desktop/io-bound-perf-testing/data/pages --bind 127.0.0.1 --port 18080 --delay-us 1000 --max-requests 0
+[check] one run per configuration
+[check] ok: all 3 configurations fetched pages/bytes/tags = (4000, 45600114, 587962)
+[run] 3/189 runs, 1s elapsed, ~61s left   [run] 6/189 runs, 2s elapsed, ~61s left   [run] 9/189 runs, 3s elapsed, ~64s left   [run] 12/189 runs, 4s elapsed, ~62s left   [run] 15/189 runs, 5s elapsed, ~61s left   [run] 18/189 runs, 6s elapsed, ~59s left   [run] 21/189 runs, 7s elapsed, ~58s left   [run] 24/189 runs, 8s elapsed, ~57s left   [run] 27/189 runs, 9s elapsed, ~55s left   [run] 30/189 runs, 10s elapsed, ~54s left   [run] 33/189 runs, 11s elapsed, ~53s left   [run] 36/189 runs, 12s elapsed, ~52s left   [run] 39/189 runs, 13s elapsed, ~51s left   [run] 42/189 runs, 14s elapsed, ~50s left   [run] 45/189 runs, 15s elapsed, ~49s left   [run] 48/189 runs, 16s elapsed, ~48s left   [run] 51/189 runs, 17s elapsed, ~47s left   [run] 54/189 runs, 18s elapsed, ~46s left   [run] 57/189 runs, 19s elapsed, ~45s left   [run] 60/189 runs, 20s elapsed, ~44s left   [run] 63/189 runs, 21s elapsed, ~43s left   [run] 66/189 runs, 22s elapsed, ~42s left   [run] 69/189 runs, 23s elapsed, ~41s left   [run] 72/189 runs, 24s elapsed, ~40s left   [run] 75/189 runs, 25s elapsed, ~38s left   [run] 78/189 runs, 26s elapsed, ~37s left   [run] 81/189 runs, 27s elapsed, ~36s left   [run] 84/189 runs, 28s elapsed, ~35s left   [run] 87/189 runs, 29s elapsed, ~34s left   [run] 90/189 runs, 30s elapsed, ~33s left   [run] 93/189 runs, 31s elapsed, ~32s left   [run] 96/189 runs, 32s elapsed, ~31s left   [run] 99/189 runs, 33s elapsed, ~30s left   [run] 102/189 runs, 34s elapsed, ~29s left   [run] 105/189 runs, 35s elapsed, ~28s left   [run] 108/189 runs, 36s elapsed, ~27s left   [run] 111/189 runs, 37s elapsed, ~26s left   [run] 114/189 runs, 38s elapsed, ~25s left   [run] 117/189 runs, 39s elapsed, ~24s left   [run] 120/189 runs, 40s elapsed, ~23s left   [run] 123/189 runs, 40s elapsed, ~22s left   [run] 126/189 runs, 41s elapsed, ~21s left   [run] 129/189 runs, 42s elapsed, ~20s left   [run] 132/189 runs, 43s elapsed, ~19s left   [run] 135/189 runs, 44s elapsed, ~18s left   [run] 138/189 runs, 45s elapsed, ~17s left   [run] 141/189 runs, 46s elapsed, ~16s left   [run] 144/189 runs, 47s elapsed, ~15s left   [run] 147/189 runs, 48s elapsed, ~14s left   [run] 150/189 runs, 49s elapsed, ~13s left   [run] 153/189 runs, 50s elapsed, ~12s left   [run] 156/189 runs, 51s elapsed, ~11s left   [run] 159/189 runs, 52s elapsed, ~10s left   [run] 162/189 runs, 53s elapsed, ~9s left   [run] 165/189 runs, 54s elapsed, ~8s left   [run] 168/189 runs, 54s elapsed, ~7s left   [run] 171/189 runs, 55s elapsed, ~6s left   [run] 174/189 runs, 56s elapsed, ~5s left   [run] 177/189 runs, 57s elapsed, ~4s left   [run] 180/189 runs, 58s elapsed, ~3s left   [run] 183/189 runs, 59s elapsed, ~2s left   [run] 186/189 runs, 60s elapsed, ~1s left   [run] 189/189 runs, 61s elapsed, ~0s left   
+[done] /Users/mykeawoniran/Desktop/io-bound-perf-testing/results/aa_test/runs.csv
+== experiment crawlers
+[build] Variant(name='stable-O3', toolchain='stable', opt_level=3, rustflags='')
+[server] /Users/mykeawoniran/Desktop/io-bound-perf-testing/target/release/static_server --root /Users/mykeawoniran/Desktop/io-bound-perf-testing/data/pages --bind 127.0.0.1 --port 18080 --delay-us 1000 --max-requests 0
+[check] one run per configuration
+[check] ok: all 3 configurations fetched pages/bytes/tags = (4000, 45600114, 587962)
+[run] 3/189 runs, 1s elapsed, ~61s left   [run] 6/189 runs, 2s elapsed, ~61s left   [run] 9/189 runs, 3s elapsed, ~60s left   [run] 12/189 runs, 4s elapsed, ~59s left   [run] 15/189 runs, 5s elapsed, ~58s left   [run] 18/189 runs, 6s elapsed, ~57s left   [run] 21/189 runs, 7s elapsed, ~56s left   [run] 24/189 runs, 8s elapsed, ~55s left   [run] 27/189 runs, 9s elapsed, ~54s left   [run] 30/189 runs, 10s elapsed, ~53s left   [run] 33/189 runs, 11s elapsed, ~52s left   [run] 36/189 runs, 12s elapsed, ~51s left   [run] 39/189 runs, 13s elapsed, ~50s left   [run] 42/189 runs, 14s elapsed, ~49s left   [run] 45/189 runs, 15s elapsed, ~48s left   [run] 48/189 runs, 16s elapsed, ~47s left   [run] 51/189 runs, 17s elapsed, ~45s left   [run] 54/189 runs, 18s elapsed, ~45s left   [run] 57/189 runs, 19s elapsed, ~44s left   [run] 60/189 runs, 20s elapsed, ~43s left   [run] 63/189 runs, 21s elapsed, ~42s left   [run] 66/189 runs, 22s elapsed, ~41s left   [run] 69/189 runs, 23s elapsed, ~40s left   [run] 72/189 runs, 24s elapsed, ~39s left   [run] 75/189 runs, 25s elapsed, ~38s left   [run] 78/189 runs, 26s elapsed, ~37s left   [run] 81/189 runs, 27s elapsed, ~36s left   [run] 84/189 runs, 28s elapsed, ~35s left   [run] 87/189 runs, 29s elapsed, ~34s left   [run] 90/189 runs, 30s elapsed, ~33s left   [run] 93/189 runs, 31s elapsed, ~32s left   [run] 96/189 runs, 32s elapsed, ~31s left   [run] 99/189 runs, 33s elapsed, ~30s left   [run] 102/189 runs, 34s elapsed, ~29s left   [run] 105/189 runs, 34s elapsed, ~28s left   [run] 108/189 runs, 35s elapsed, ~27s left   [run] 111/189 runs, 36s elapsed, ~26s left   [run] 114/189 runs, 37s elapsed, ~25s left   [run] 117/189 runs, 38s elapsed, ~24s left   [run] 120/189 runs, 39s elapsed, ~23s left   [run] 123/189 runs, 40s elapsed, ~22s left   [run] 126/189 runs, 41s elapsed, ~21s left   [run] 129/189 runs, 42s elapsed, ~20s left   [run] 132/189 runs, 43s elapsed, ~19s left   [run] 135/189 runs, 44s elapsed, ~18s left   [run] 138/189 runs, 45s elapsed, ~17s left   [run] 141/189 runs, 46s elapsed, ~16s left   [run] 144/189 runs, 47s elapsed, ~15s left   [run] 147/189 runs, 48s elapsed, ~14s left   [run] 150/189 runs, 49s elapsed, ~13s left   [run] 153/189 runs, 50s elapsed, ~12s left   [run] 156/189 runs, 51s elapsed, ~11s left   [run] 159/189 runs, 52s elapsed, ~10s left   [run] 162/189 runs, 53s elapsed, ~9s left   [run] 165/189 runs, 53s elapsed, ~8s left   [run] 168/189 runs, 54s elapsed, ~7s left   [run] 171/189 runs, 55s elapsed, ~6s left   [run] 174/189 runs, 56s elapsed, ~5s left   [run] 177/189 runs, 57s elapsed, ~4s left   [run] 180/189 runs, 58s elapsed, ~3s left   [run] 183/189 runs, 59s elapsed, ~2s left   [run] 186/189 runs, 61s elapsed, ~1s left   [run] 189/189 runs, 62s elapsed, ~0s left   
+[done] /Users/mykeawoniran/Desktop/io-bound-perf-testing/results/crawlers/runs.csv
+== experiment optimization
+[build] Variant(name='stable-O0', toolchain='stable', opt_level=0, rustflags='')
+[build] Variant(name='stable-O1', toolchain='stable', opt_level=1, rustflags='')
+[build] Variant(name='stable-O2', toolchain='stable', opt_level=2, rustflags='')
+[build] Variant(name='stable-O3', toolchain='stable', opt_level=3, rustflags='')
+[build] Variant(name='nightly-O0', toolchain='nightly', opt_level=0, rustflags='')
+[build] Variant(name='nightly-O1', toolchain='nightly', opt_level=1, rustflags='')
+[build] Variant(name='nightly-O2', toolchain='nightly', opt_level=2, rustflags='')
+[build] Variant(name='nightly-O3', toolchain='nightly', opt_level=3, rustflags='')
+[server] /Users/mykeawoniran/Desktop/io-bound-perf-testing/target/release/static_server --root /Users/mykeawoniran/Desktop/io-bound-perf-testing/data/pages --bind 127.0.0.1 --port 18080 --delay-us 1000 --max-requests 0
+[check] one run per configuration
+[check] ok: all 8 configurations fetched pages/bytes/tags = (4000, 45600114, 587962)
+[run] 8/504 runs, 3s elapsed, ~201s left   [run] 16/504 runs, 6s elapsed, ~192s left   [run] 24/504 runs, 9s elapsed, ~188s left   [run] 32/504 runs, 12s elapsed, ~177s left   [run] 40/504 runs, 15s elapsed, ~169s left   [run] 48/504 runs, 17s elapsed, ~163s left   [run] 56/504 runs, 20s elapsed, ~157s left   [run] 64/504 runs, 22s elapsed, ~154s left   [run] 72/504 runs, 25s elapsed, ~150s left   [run] 80/504 runs, 28s elapsed, ~146s left   [run] 88/504 runs, 30s elapsed, ~142s left   [run] 96/504 runs, 33s elapsed, ~139s left   [run] 104/504 runs, 35s elapsed, ~135s left   [run] 112/504 runs, 38s elapsed, ~132s left   [run] 120/504 runs, 40s elapsed, ~129s left   [run] 128/504 runs, 43s elapsed, ~126s left   [run] 136/504 runs, 46s elapsed, ~124s left   [run] 144/504 runs, 49s elapsed, ~122s left   [run] 152/504 runs, 52s elapsed, ~119s left   [run] 160/504 runs, 54s elapsed, ~117s left   [run] 168/504 runs, 57s elapsed, ~115s left   [run] 176/504 runs, 60s elapsed, ~112s left   [run] 184/504 runs, 63s elapsed, ~109s left   [run] 192/504 runs, 65s elapsed, ~106s left   [run] 200/504 runs, 69s elapsed, ~104s left   [run] 208/504 runs, 71s elapsed, ~101s left   [run] 216/504 runs, 74s elapsed, ~99s left   [run] 224/504 runs, 77s elapsed, ~96s left   [run] 232/504 runs, 79s elapsed, ~93s left   [run] 240/504 runs, 82s elapsed, ~90s left   [run] 248/504 runs, 84s elapsed, ~87s left   [run] 256/504 runs, 87s elapsed, ~84s left   [run] 264/504 runs, 89s elapsed, ~81s left   [run] 272/504 runs, 92s elapsed, ~78s left   [run] 280/504 runs, 95s elapsed, ~76s left   [run] 288/504 runs, 97s elapsed, ~73s left   [run] 296/504 runs, 100s elapsed, ~70s left   [run] 304/504 runs, 102s elapsed, ~67s left   [run] 312/504 runs, 105s elapsed, ~64s left   [run] 320/504 runs, 107s elapsed, ~62s left   [run] 328/504 runs, 110s elapsed, ~59s left   [run] 336/504 runs, 113s elapsed, ~56s left   [run] 344/504 runs, 115s elapsed, ~54s left   [run] 352/504 runs, 118s elapsed, ~51s left   [run] 360/504 runs, 120s elapsed, ~48s left   [run] 368/504 runs, 123s elapsed, ~45s left   [run] 376/504 runs, 125s elapsed, ~43s left   [run] 384/504 runs, 128s elapsed, ~40s left   [run] 392/504 runs, 131s elapsed, ~37s left   [run] 400/504 runs, 133s elapsed, ~35s left   [run] 408/504 runs, 136s elapsed, ~32s left   [run] 416/504 runs, 138s elapsed, ~29s left   [run] 424/504 runs, 141s elapsed, ~27s left   [run] 432/504 runs, 143s elapsed, ~24s left   [run] 440/504 runs, 146s elapsed, ~21s left   [run] 448/504 runs, 148s elapsed, ~19s left   [run] 456/504 runs, 151s elapsed, ~16s left   [run] 464/504 runs, 153s elapsed, ~13s left   [run] 472/504 runs, 156s elapsed, ~11s left   [run] 480/504 runs, 159s elapsed, ~8s left   [run] 488/504 runs, 161s elapsed, ~5s left   [run] 496/504 runs, 164s elapsed, ~3s left   [run] 504/504 runs, 167s elapsed, ~0s left   
+[done] /Users/mykeawoniran/Desktop/io-bound-perf-testing/results/optimization/runs.csv
+== experiment target_cpu
+[build] Variant(name='stable-O0', toolchain='stable', opt_level=0, rustflags='')
+[build] Variant(name='stable-O0-native', toolchain='stable', opt_level=0, rustflags='-C target-cpu=native')
+[server] /Users/mykeawoniran/Desktop/io-bound-perf-testing/target/release/static_server --root /Users/mykeawoniran/Desktop/io-bound-perf-testing/data/pages --bind 127.0.0.1 --port 18080 --delay-us 1000 --max-requests 0
+[check] one run per configuration
+[check] ok: all 6 configurations fetched pages/bytes/tags = (4000, 45600114, 587962)
+[run] 6/378 runs, 2s elapsed, ~134s left   [run] 12/378 runs, 4s elapsed, ~136s left   [run] 18/378 runs, 7s elapsed, ~133s left   [run] 24/378 runs, 9s elapsed, ~131s left   [run] 30/378 runs, 11s elapsed, ~127s left   [run] 36/378 runs, 13s elapsed, ~125s left   [run] 42/378 runs, 15s elapsed, ~121s left   [run] 48/378 runs, 17s elapsed, ~118s left   [run] 54/378 runs, 19s elapsed, ~116s left   [run] 60/378 runs, 21s elapsed, ~113s left   [run] 66/378 runs, 24s elapsed, ~111s left   [run] 72/378 runs, 26s elapsed, ~110s left   [run] 78/378 runs, 28s elapsed, ~108s left   [run] 84/378 runs, 30s elapsed, ~105s left   [run] 90/378 runs, 32s elapsed, ~103s left   [run] 96/378 runs, 34s elapsed, ~101s left   [run] 102/378 runs, 37s elapsed, ~99s left   [run] 108/378 runs, 39s elapsed, ~97s left   [run] 114/378 runs, 41s elapsed, ~95s left   [run] 120/378 runs, 43s elapsed, ~92s left   [run] 126/378 runs, 45s elapsed, ~90s left   [run] 132/378 runs, 47s elapsed, ~88s left   [run] 138/378 runs, 49s elapsed, ~86s left   [run] 144/378 runs, 51s elapsed, ~83s left   [run] 150/378 runs, 53s elapsed, ~81s left   [run] 156/378 runs, 55s elapsed, ~79s left   [run] 162/378 runs, 57s elapsed, ~77s left   [run] 168/378 runs, 60s elapsed, ~75s left   [run] 174/378 runs, 62s elapsed, ~73s left   [run] 180/378 runs, 64s elapsed, ~71s left   [run] 186/378 runs, 66s elapsed, ~68s left   [run] 192/378 runs, 68s elapsed, ~66s left   [run] 198/378 runs, 70s elapsed, ~64s left   [run] 204/378 runs, 73s elapsed, ~62s left   [run] 210/378 runs, 75s elapsed, ~60s left   [run] 216/378 runs, 79s elapsed, ~59s left   [run] 222/378 runs, 83s elapsed, ~58s left   [run] 228/378 runs, 88s elapsed, ~58s left   [run] 234/378 runs, 92s elapsed, ~57s left   [run] 240/378 runs, 95s elapsed, ~55s left   [run] 246/378 runs, 99s elapsed, ~53s left   [run] 252/378 runs, 103s elapsed, ~51s left   [run] 258/378 runs, 107s elapsed, ~50s left   [run] 264/378 runs, 112s elapsed, ~48s left   [run] 270/378 runs, 117s elapsed, ~47s left   [run] 276/378 runs, 122s elapsed, ~45s left   [run] 282/378 runs, 127s elapsed, ~43s left   [run] 288/378 runs, 133s elapsed, ~42s left   [run] 294/378 runs, 137s elapsed, ~39s left   [run] 300/378 runs, 141s elapsed, ~37s left   [run] 306/378 runs, 147s elapsed, ~35s left   [run] 312/378 runs, 152s elapsed, ~32s left   [run] 318/378 runs, 157s elapsed, ~30s left   [run] 324/378 runs, 161s elapsed, ~27s left   [run] 330/378 runs, 165s elapsed, ~24s left   [run] 336/378 runs, 168s elapsed, ~21s left   [run] 342/378 runs, 173s elapsed, ~18s left   [run] 348/378 runs, 176s elapsed, ~15s left   [run] 354/378 runs, 179s elapsed, ~12s left   [run] 360/378 runs, 181s elapsed, ~9s left   [run] 366/378 runs, 183s elapsed, ~6s left   [run] 372/378 runs, 186s elapsed, ~3s left   [run] 378/378 runs, 188s elapsed, ~0s left   
+[done] /Users/mykeawoniran/Desktop/io-bound-perf-testing/results/target_cpu/runs.csv
+== Monte Carlo verification
+# Monte Carlo verification of the methodology
+
+Generated by `verification/simulate.py --trials 1000 --seed 20221110`.
+
+## A. Multiple comparisons (look-elsewhere effect)
+
+5 *identical* configurations, n = 40 runs each, 10 pairwise comparisons, alpha = 0.05, 1000 simulated experiments. Cell = fraction of experiments that wrongly report at least one significant difference (family-wise error rate). Theory without correction: up to 1 - 0.95^10 = 0.40.
+
+| distribution | no correction (m = 1) | Bonferroni, per-configuration fences (paper) | Bonferroni, pooled fences (default) |
+|---|---|---|---|
+| normal | 0.285 | 0.084 | **0.042** |
+| lognormal | 0.304 | 0.084 | **0.047** |
+| shifted-exp | 0.321 | 0.237 | **0.037** |
+
+## B. Sensitivity: detection rate vs. true difference
+
+Two configurations, normal noise with CV = 1% (sd = 1 ms on 100 ms), Bonferroni m = 10, 500 experiments per cell. Cell = fraction in which the faster configuration is detected *and* has the correct sign.
+
+| true difference | n = 20 | n = 40 | n = 100 |
+|---|---|---|---|
+| 0.05% (0.05x noise sd) | 0.01 | 0.01 | 0.01 |
+| 0.1% (0.1x noise sd) | 0.01 | 0.01 | 0.01 |
+| 0.25% (0.25x noise sd) | 0.02 | 0.04 | 0.14 |
+| 0.5% (0.5x noise sd) | 0.10 | 0.24 | 0.74 |
+| 1% (1x noise sd) | 0.51 | 0.93 | 0.99 |
+| 2% (2x noise sd) | 1.00 | 1.00 | 1.00 |
+
+## C. Randomised, interleaved execution order vs. machine drift
+
+Two *identical* configurations, n = 40 each, noise CV = 1%, plus a slow linear drift that makes the machine 3% slower from the first to the last run (e.g. heating up). alpha = 0.05, one comparison, 1000 experiments. Cell = false-positive rate.
+
+| execution order | false-positive rate | mean reported difference |
+|---|---|---|
+| sequential (A...A B...B) | **1.000** | -1.46% |
+| randomised rounds (paper) | **0.005** | +0.02% |
+
+## D. Outlier removal (1.5 x IQR)
+
+True difference 0.5%, noise CV = 1%, n = 40; each run has a 5% chance of a +30% spike (a background job, a page-cache miss, ...). Student t-test on the raw data vs. the full pipeline (IQR filter, then normality test, then t-test or rank-sum). alpha = 0.05, one comparison, 1000 experiments.
+
+| analysis | detection rate | mean estimated difference | false positives in an A/A test |
+|---|---|---|---|
+| t-test on raw data | **0.07** | +0.53% (sd 1.41) | 0.039 |
+| pipeline, per-configuration fences (paper) | **0.59** | +0.50% (sd 0.25) | 0.068 |
+| pipeline, pooled fences (default) | **0.57** | +0.48% (sd 0.24) | 0.045 |
+
+## E. Is the outlier step itself valid? (type I error of one comparison)
+
+Two *identical* configurations, n = 40 each, noise CV = 1%, alpha = 0.05, 2000 experiments. A valid procedure gives ~0.05. Spikes: 5% of runs +30%.
+
+| distribution | per-configuration fences (paper) | pooled fences (default) | no outlier removal |
+|---|---|---|---|
+| normal | **0.074** | **0.053** | 0.051 |
+| lognormal | **0.086** | **0.059** | 0.057 |
+| shifted-exp | **0.166** | **0.050** | 0.048 |
+| normal + spikes | **0.073** | **0.054** | 0.044 |
+
+exit=0

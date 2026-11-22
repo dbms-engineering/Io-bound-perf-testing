@@ -1,0 +1,16 @@
+{
+  "name": "crawlers",
+  "title": "Experiment 1 - crawler implementations (paper Table II)",
+  "description": "Process pool vs thread pool vs event loop; release build, opt-level 3, stable toolchain. Equal concurrency: 16 connections each.",
+  "urls": "data/urls.txt",
+  "server": {"start": true, "root": "data/pages", "host": "127.0.0.1", "port": 18080, "delay_us": 1000},
+  "reps": 60,
+  "warmup": 3,
+  "variants": [{"name": "stable-O3", "toolchain": "stable", "opt_level": 3}],
+  "configs": [
+    {"name": "process", "variant": "stable-O3", "mode": "process", "args": {"workers": 16}},
+    {"name": "thread",  "variant": "stable-O3", "mode": "thread",  "args": {"workers": 16}},
+    {"name": "event",   "variant": "stable-O3", "mode": "event",   "args": {"threads": 2, "conns": 8}}
+  ],
+  "comparisons": [["process", "thread", "event"]]
+}

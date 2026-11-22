@@ -1,0 +1,137 @@
+{
+  "name": "optimization",
+  "title": "Experiment 2 - optimization levels x toolchain, process-pool crawler (paper Table IV)",
+  "description": "Rust analogue of GCC/Clang -O0..-O3: stable vs nightly rustc, opt-level 0..3.",
+  "urls": "data/urls.txt",
+  "server": {
+    "start": true,
+    "root": "data/pages",
+    "host": "127.0.0.1",
+    "port": 18080,
+    "delay_us": 1000
+  },
+  "reps": 60,
+  "warmup": 3,
+  "variants": [
+    {
+      "name": "stable-O0",
+      "toolchain": "stable",
+      "opt_level": 0
+    },
+    {
+      "name": "stable-O1",
+      "toolchain": "stable",
+      "opt_level": 1
+    },
+    {
+      "name": "stable-O2",
+      "toolchain": "stable",
+      "opt_level": 2
+    },
+    {
+      "name": "stable-O3",
+      "toolchain": "stable",
+      "opt_level": 3
+    },
+    {
+      "name": "nightly-O0",
+      "toolchain": "nightly",
+      "opt_level": 0
+    },
+    {
+      "name": "nightly-O1",
+      "toolchain": "nightly",
+      "opt_level": 1
+    },
+    {
+      "name": "nightly-O2",
+      "toolchain": "nightly",
+      "opt_level": 2
+    },
+    {
+      "name": "nightly-O3",
+      "toolchain": "nightly",
+      "opt_level": 3
+    }
+  ],
+  "configs": [
+    {
+      "name": "stable-O0",
+      "variant": "stable-O0",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    },
+    {
+      "name": "stable-O1",
+      "variant": "stable-O1",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    },
+    {
+      "name": "stable-O2",
+      "variant": "stable-O2",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    },
+    {
+      "name": "stable-O3",
+      "variant": "stable-O3",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    },
+    {
+      "name": "nightly-O0",
+      "variant": "nightly-O0",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    },
+    {
+      "name": "nightly-O1",
+      "variant": "nightly-O1",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    },
+    {
+      "name": "nightly-O2",
+      "variant": "nightly-O2",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    },
+    {
+      "name": "nightly-O3",
+      "variant": "nightly-O3",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      }
+    }
+  ],
+  "comparisons": [
+    [
+      "stable-O0",
+      "stable-O1",
+      "stable-O2",
+      "stable-O3"
+    ],
+    [
+      "nightly-O0",
+      "nightly-O1",
+      "nightly-O2",
+      "nightly-O3"
+    ]
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "experiment": "target_cpu",
+  "config_file": "experiments/target_cpu.json",
+  "master_seed": 3770795579,
+  "reps": 60,
+  "warmup": 3,
+  "server": {
+    "start": true,
+    "root": "data/pages",
+    "host": "127.0.0.1",
+    "port": 18080,
+    "delay_us": 1000
+  },
+  "system": {
+    "date_utc": "2026-11-22T00:59:58+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.12.5",
+    "cpu_count": 8,
+    "toolchains": {
+      "stable": "rustc 1.90.0 (1159e78c4 2025-09-14)"
+    },
+    "cpu": "Apple M3"
+  },
+  "experiment_config": {
+    "name": "target_cpu",
+    "title": "Experiment 3 - target-cpu=native at opt-level 0 (paper Table V, -march=native)",
+    "description": "Rust analogue of Clang -O0 with/without -march=native: RUSTFLAGS=-C target-cpu=native.",
+    "urls": "data/urls.txt",
+    "server": {
+      "start": true,
+      "root": "data/pages",
+      "host": "127.0.0.1",
+      "port": 18080,
+      "delay_us": 1000
+    },
+    "reps": 60,
+    "warmup": 3,
+    "variants": [
+      {
+        "name": "stable-O0",
+        "toolchain": "stable",
+        "opt_level": 0
+      },
+      {
+        "name": "stable-O0-native",
+        "toolchain": "stable",
+        "opt_level": 0,
+        "rustflags": "-C target-cpu=native"
+      }
+    ],
+    "configs": [
+      {
+        "name": "process",
+        "variant": "stable-O0",
+        "mode": "process",
+        "args": {
+          "workers": 16
+        }
+      },
+      {
+        "name": "process-native",
+        "variant": "stable-O0-native",
+        "mode": "process",
+        "args": {
+          "workers": 16
+        }
+      },
+      {
+        "name": "thread",
+        "variant": "stable-O0",
+        "mode": "thread",
+        "args": {
+          "workers": 16
+        }
+      },
+      {
+        "name": "thread-native",
+        "variant": "stable-O0-native",
+        "mode": "thread",
+        "args": {
+          "workers": 16
+        }
+      },
+      {
+        "name": "event",
+        "variant": "stable-O0",
+        "mode": "event",
+        "args": {
+          "threads": 2,
+          "conns": 8
+        }
+      },
+      {
+        "name": "event-native",
+        "variant": "stable-O0-native",
+        "mode": "event",
+        "args": {
+          "threads": 2,
+          "conns": 8
+        }
+      }
+    ],
+    "comparisons": [
+      [
+        "process",
+        "process-native"
+      ],
+      [
+        "thread",
+        "thread-native"
+      ],
+      [
+        "event",
+        "event-native"
+      ]
+    ]
+  }
+}

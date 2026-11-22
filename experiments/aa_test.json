@@ -1,0 +1,16 @@
+{
+  "name": "aa_test",
+  "title": "Control - A/A test: three identical configurations (must show no difference)",
+  "description": "The same binary and arguments under three names. Any 'significant' difference is a false positive of the measurement + analysis procedure on this machine.",
+  "urls": "data/urls.txt",
+  "server": {"start": true, "root": "data/pages", "host": "127.0.0.1", "port": 18080, "delay_us": 1000},
+  "reps": 60,
+  "warmup": 3,
+  "variants": [{"name": "stable-O3", "toolchain": "stable", "opt_level": 3}],
+  "configs": [
+    {"name": "thread-A", "variant": "stable-O3", "mode": "thread", "args": {"workers": 16}},
+    {"name": "thread-B", "variant": "stable-O3", "mode": "thread", "args": {"workers": 16}},
+    {"name": "thread-C", "variant": "stable-O3", "mode": "thread", "args": {"workers": 16}}
+  ],
+  "comparisons": [["thread-A", "thread-B", "thread-C"]]
+}

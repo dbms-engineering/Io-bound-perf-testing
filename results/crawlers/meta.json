@@ -1,0 +1,81 @@
+{
+  "experiment": "crawlers",
+  "config_file": "experiments/crawlers.json",
+  "master_seed": 3910748527,
+  "reps": 60,
+  "warmup": 3,
+  "server": {
+    "start": true,
+    "root": "data/pages",
+    "host": "127.0.0.1",
+    "port": 18080,
+    "delay_us": 1000
+  },
+  "system": {
+    "date_utc": "2026-11-22T00:46:40+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.12.5",
+    "cpu_count": 8,
+    "toolchains": {
+      "stable": "rustc 1.90.0 (1159e78c4 2025-09-14)"
+    },
+    "cpu": "Apple M3"
+  },
+  "experiment_config": {
+    "name": "crawlers",
+    "title": "Experiment 1 - crawler implementations (paper Table II)",
+    "description": "Process pool vs thread pool vs event loop; release build, opt-level 3, stable toolchain. Equal concurrency: 16 connections each.",
+    "urls": "data/urls.txt",
+    "server": {
+      "start": true,
+      "root": "data/pages",
+      "host": "127.0.0.1",
+      "port": 18080,
+      "delay_us": 1000
+    },
+    "reps": 60,
+    "warmup": 3,
+    "variants": [
+      {
+        "name": "stable-O3",
+        "toolchain": "stable",
+        "opt_level": 3
+      }
+    ],
+    "configs": [
+      {
+        "name": "process",
+        "variant": "stable-O3",
+        "mode": "process",
+        "args": {
+          "workers": 16
+        }
+      },
+      {
+        "name": "thread",
+        "variant": "stable-O3",
+        "mode": "thread",
+        "args": {
+          "workers": 16
+        }
+      },
+      {
+        "name": "event",
+        "variant": "stable-O3",
+        "mode": "event",
+        "args": {
+          "threads": 2,
+          "conns": 8
+        }
+      }
+    ],
+    "comparisons": [
+      [
+        "process",
+        "thread",
+        "event"
+      ]
+    ]
+  }
+}

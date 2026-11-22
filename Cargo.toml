@@ -1,0 +1,15 @@
+[package]
+name = "io-bound-perf"
+version = "0.1.0"
+edition = "2021"
+description = "Crawlers + static server for the statistics-based I/O-bound performance methodology (Sultanov et al., CSIT 2022)"
+publish = false
+
+[dependencies]
+libc = "0.2"                                         # fork, pipe, and waitpid for the process pool
+mio = { version = "1", features = ["os-poll", "net"] } # Event loop on epoll (Linux) or kqueue (macOS)
+
+[profile.release]
+# opt-level is overridden for each experiment variant through CARGO_PROFILE_RELEASE_OPT_LEVEL.
+opt-level = 3
+debug = false

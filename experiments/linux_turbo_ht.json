@@ -1,0 +1,154 @@
+{
+  "name": "linux_turbo_ht",
+  "title": "Linux only - Turbo Boost x Hyper-threading (paper Table III)",
+  "description": "EXAMPLE, not run on macOS. pre_cmd toggles Intel Turbo Boost and SMT before every run (needs root: run the harness with sudo or grant write access to these sysfs files). Rounds stay randomized because the toggle happens per run.",
+  "urls": "data/urls.txt",
+  "server": {
+    "start": false,
+    "host": "192.168.1.2",
+    "port": 80
+  },
+  "reps": 60,
+  "warmup": 3,
+  "variants": [
+    {
+      "name": "stable-O3",
+      "toolchain": "stable",
+      "opt_level": 3
+    }
+  ],
+  "configs": [
+    {
+      "name": "process-noTB-noHT",
+      "variant": "stable-O3",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo off > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "process-noTB-HT",
+      "variant": "stable-O3",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo on > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "process-TB-noHT",
+      "variant": "stable-O3",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo off > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "process-TB-HT",
+      "variant": "stable-O3",
+      "mode": "process",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo on > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "thread-noTB-noHT",
+      "variant": "stable-O3",
+      "mode": "thread",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo off > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "thread-noTB-HT",
+      "variant": "stable-O3",
+      "mode": "thread",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo on > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "thread-TB-noHT",
+      "variant": "stable-O3",
+      "mode": "thread",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo off > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "thread-TB-HT",
+      "variant": "stable-O3",
+      "mode": "thread",
+      "args": {
+        "workers": 16
+      },
+      "pre_cmd": "echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo on > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "event-noTB-noHT",
+      "variant": "stable-O3",
+      "mode": "event",
+      "args": {
+        "threads": 2,
+        "conns": 8
+      },
+      "pre_cmd": "echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo off > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "event-noTB-HT",
+      "variant": "stable-O3",
+      "mode": "event",
+      "args": {
+        "threads": 2,
+        "conns": 8
+      },
+      "pre_cmd": "echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo on > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "event-TB-noHT",
+      "variant": "stable-O3",
+      "mode": "event",
+      "args": {
+        "threads": 2,
+        "conns": 8
+      },
+      "pre_cmd": "echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo off > /sys/devices/system/cpu/smt/control && sleep 1"
+    },
+    {
+      "name": "event-TB-HT",
+      "variant": "stable-O3",
+      "mode": "event",
+      "args": {
+        "threads": 2,
+        "conns": 8
+      },
+      "pre_cmd": "echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo && echo on > /sys/devices/system/cpu/smt/control && sleep 1"
+    }
+  ],
+  "comparisons": [
+    [
+      "process-noTB-noHT",
+      "process-TB-noHT",
+      "process-noTB-HT",
+      "process-TB-HT"
+    ],
+    [
+      "thread-noTB-noHT",
+      "thread-TB-noHT",
+      "thread-noTB-HT",
+      "thread-TB-HT"
+    ],
+    [
+      "event-noTB-noHT",
+      "event-TB-noHT",
+      "event-noTB-HT",
+      "event-TB-HT"
+    ]
+  ]
+}
