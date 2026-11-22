@@ -4,6 +4,6 @@
 
 | configuration | n | outliers | skewness | excess kurtosis | normality p | shape |
 |---|---|---|---|---|---|---|
-| process | 60 | 1 | +0.98 | -0.04 | 0.014 | Borderline normal: right-skewed |
-| thread | 60 | 4 | +1.09 | +0.92 | 0.003 | Non-Gaussian: right-skewed |
-| event | 60 | 7 | +0.82 | +0.32 | 0.043 | Borderline normal: right-skewed |
+| process | 60 | 7 | +1.41 | +1.14 | 3.19e-04 | Non-Gaussian: right-skewed, heavy-tailed |
+| thread | 60 | 9 | +1.47 | +1.45 | 1.75e-04 | Non-Gaussian: right-skewed, heavy-tailed |
+| event | 60 | 8 | +1.87 | +2.60 | 2.03e-06 | Non-Gaussian: right-skewed, heavy-tailed |

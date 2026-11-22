@@ -1,7 +1,7 @@
 {
   "experiment": "crawlers",
   "config_file": "experiments/crawlers.json",
-  "master_seed": 3910748527,
+  "master_seed": 1069861129,
   "reps": 60,
   "warmup": 3,
   "server": {
@@ -12,7 +12,7 @@
     "delay_us": 1000
   },
   "system": {
-    "date_utc": "2026-11-22T00:46:40+00:00",
+    "date_utc": "2026-11-22T10:46:56+00:00",
     "platform": "macOS-27.0.1-arm64-arm-64bit",
     "machine": "arm64",
     "python": "3.12.5",

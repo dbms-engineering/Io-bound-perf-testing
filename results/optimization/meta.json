@@ -1,7 +1,7 @@
 {
   "experiment": "optimization",
   "config_file": "experiments/optimization.json",
-  "master_seed": 1278199798,
+  "master_seed": 753713973,
   "reps": 60,
   "warmup": 3,
   "server": {
@@ -12,7 +12,7 @@
     "delay_us": 1000
   },
   "system": {
-    "date_utc": "2026-11-22T00:47:57+00:00",
+    "date_utc": "2026-11-22T10:48:16+00:00",
     "platform": "macOS-27.0.1-arm64-arm-64bit",
     "machine": "arm64",
     "python": "3.12.5",

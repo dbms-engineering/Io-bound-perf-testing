@@ -74,6 +74,9 @@ as small as 0.1%, which is below the run-to-run noise.
 You need a Rust toolchain (`rustup`), the `nightly` toolchain for the toolchain experiment, and
 Python 3.10 or later.
 
+[RUNNING.md](RUNNING.md) has a full walkthrough, including a short demo, the options of each
+script, how to read the reports and a troubleshooting table.
+
 ```bash
 cd io-bound-perf-testing
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt   # Installs numpy, scipy and matplotlib.
